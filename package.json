@@ -1,0 +1,22 @@
+{
+  "name": "tailwind_test2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss src/css/style.css -o assets/CSS/style.css",
+    "watch": "postcss src/css/style.css -o assets/CSS/style.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.8",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.8"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "cssnano": "^7.0.7",
+    "postcss-cli": "^11.0.1"
+  }
+}

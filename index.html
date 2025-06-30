@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>有限会社小堀工務店</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+
+<!-- 最初は非表示。スクロールで上から表示 -->
+<header id="siteHeader"
+  class="pc-none fixed top-0 left-0 w-full z-50 bg-gray-900 text-white flex justify-end items-stretch h-[60px] transition-transform duration-300 ease-in-out">
+  <nav class="flex items-center gap-8 text-sm tracking-widest pr-6">
+    <a href="#" class="hover:text-[#C2A74B]">HOME</a>
+    <a href="#" class="hover:text-[#C2A74B]">NEWS</a>
+    <a href="#" class="hover:text-[#C2A74B]">ABOUT</a>
+    <a href="#" class="hover:text-[#C2A74B]">SERVICE</a>
+    <a href="#" class="hover:text-[#C2A74B]">STAFF</a>
+    <a href="#" class="hover:text-[#C2A74B]">WORKS</a>
+    <a href="#" class="hover:text-[#C2A74B]">BLOG</a>
+  </nav>
+  <a href="#"
+    class="bg-[#C2A74B] text-white font-bold text-sm flex items-center justify-center w-[120px] hover:opacity-80">
+    CONTACT
+  </a>
+</header>
+<div class="pc-none relative pt-15 bg-black"></div>
+
+<body class=" bg-white text-black ">
+
+  <!-- メインビジュアル -->
+  <section class="pc-none relative w-full h-940px bg-cover bg-center flex items-center justify-center"
+    style="background-image: url('img/top_004.png');">
+    <div class="absolute inset-0 bg-black opacity-85"></div>
+
+    <div class="relative z-10 max-w-7xl w-full flex items-center justify-center px-6">
+      <!-- 左画像 -->
+      <div class="w-1/2 max-xl:w-[35%] mb-10 max-xl:mt-15">
+        <img src="img/top_005.png" alt="作業員画像" class="w-full h-auto object-cover">
+      </div>
+
+      <!-- テキスト -->
+      <div class="w-1/2 max-xl:w-[65%] text-left pl-15"> <!-- ←画像との間隔 -->
+        <!-- 黄色文字ブロック -->
+        <div class="text-[#C2A74B] ml-[-9rem] max-xl:ml-[-5rem]">
+          <p class="fade-text text-3xl font-semibold mb-4">情熱が価値を変える</p>
+          <h1 class="fade-text text-8xl font-extrabold mb-6">
+            CREATED<br>
+            <span class="fade-text text-7xl font-bold">with Athletes Pride</span>
+          </h1>
+          <p class="fade-text text-2xl  mb-20 max-xl:mb-10">様々なアスリート達が魂を込めて建てる足場のプロ集団</p>
+        </div>
+
+        <!-- 白文字（会社名） -->
+        <p class="fade-text text-white text-4xl font-semibold leading-relaxed">
+          有限会社小堀工務店<br>
+          <span class="fade-text text-5xl font-bold whitespace-nowrap">- ひとつひとつ魂を込めて -</span>
+        </p>
+      </div>
+  </section>
+
+  <!-- スマホ用メインビジュアル -->
+  <section class="sp-none relative w-full h-[100vh] bg-cover bg-center flex flex-col justify-between"
+    style="background-image: url('img/top_003.png');">
+    <!-- 黒のオーバーレイ -->
+    <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
+
+    <!-- ハンバーガーメニュー -->
+    <div id="hamburgerWrapper"
+      class="fixed top-0 right-0 z-50 bg-[#C2A74B] w-20 h-20 flex items-center justify-center overflow-visible">
+      <button id="menuButton" class="relative w-8 h-8 flex flex-col justify-between items-center p-1.5">
+        <span class="line1 w-8 h-0.5 bg-white transition-all duration-300"></span>
+        <span class="line2 w-8 h-0.5 bg-white transition-all duration-300"></span>
+        <span class="line3 w-8 h-0.5 bg-white transition-all duration-300"></span>
+      </button>
+    </div>
+
+    <!-- メニュー -->
+    <div id="mobileMenu" class="fixed top-0 left-0 w-full h-full bg-[#C2A74B] text-white z-40 
+         opacity-0 scale-0 pointer-events-none 
+         transition-all duration-500 ease-out 
+         origin-top-right 
+         flex flex-col items-center justify-center space-y-8 text-xl">
+      <a href="#">HOME</a>
+      <a href="#">NEWS</a>
+      <a href="#">ABOUT</a>
+      <a href="#">SERVICE</a>
+      <a href="#">STAFF</a>
+      <a href="#">WORKS</a>
+      <a href="#">BLOG</a>
+      <a href="#">CONTACT</a>
+    </div>
+
+    <!-- キャッチコピー -->
+    <div class="relative z-10 px-3 pt-24 text-[#C2A74B] text-left">
+      <p class="text-3xl font-semibold mb-2">情熱が価値を変える</p>
+      <h1 class="text-8xl font-extrabold leading-tight mb-1">CREATED</h1>
+      <p class="text-7xl font-semibold">with Athletes Pride</p>
+      <p class="text-2xl mt-4 tracking-wide">様々なアスリート達が魂を込めて建てる足場のプロ集団</p>
+    </div>
+
+    <!-- 画像エリア -->
+    <div class="relative z-10 mt-10 flex justify-center gap-3 px-3">
+      <div class="w-1/2"><img src="img/top_001.png" alt="作業員A" class="w-1/2 object-cover"></div>
+      <div class="w-1/2"><img src="img/top_002.png" alt="作業員B" class="w-1/2 object-cover"></div>
+    </div>
+
+    <!-- フッター的コピー -->
+    <div class="relative z-10 px-3 pb-8 text-left text-white text-sm leading-relaxed">
+      <p class="font-semibold text-4xl pt-15">有限会社小堀工務店</p>
+      <p class="text-5xl font-bold pt-4">- ひとつひとつ魂を込めて -</p>
+    </div>
+  </section>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const hamburgerWrapper = document.getElementById("hamburgerWrapper");
+
+    menuButton.addEventListener("click", () => {
+      // ハンバーガーボタンの背景色をトグル
+      hamburgerWrapper.classList.toggle("bg-[#C2A74B]");
+      hamburgerWrapper.classList.toggle("bg-transparent");
+    });
+
+    menuButton.addEventListener("click", () => {
+      menuButton.classList.toggle("open");
+
+      const isOpen = mobileMenu.classList.contains("opacity-100");
+
+      if (isOpen) {
+        mobileMenu.classList.remove("opacity-100", "scale-100", "pointer-events-auto");
+        mobileMenu.classList.add("opacity-0", "scale-0", "pointer-events-none");
+      } else {
+        mobileMenu.classList.remove("opacity-0", "scale-0", "pointer-events-none");
+        mobileMenu.classList.add("opacity-100", "scale-100", "pointer-events-auto");
+      }
+    });
+  </script>
+
+  <script>
+    const btn = document.getElementById("menuButton");
+    const line1 = btn.querySelector(".line1");
+    const line2 = btn.querySelector(".line2");
+    const line3 = btn.querySelector(".line3");
+
+    btn.addEventListener("click", () => {
+      line1.classList.toggle("rotate-45");
+      line1.classList.toggle("translate-y-2");
+
+      line2.classList.toggle("opacity-0");
+
+      line3.classList.toggle("-rotate-45");
+      line3.classList.toggle("-translate-y-2");
+    });
+  </script>
+
+
+  <section class="bg-[#001D7F] text-white py-20 px-4">
+    <div class="max-w-[1200px] mx-auto sm:flex justify-between sm:flex-row items-start gap-12 sm:px-10">
+
+      <!-- 左カラム：NEWS + お知らせ -->
+      <div class="w-full sm:w-1/4 text-center sm:text-left">
+        <h2 class="text-5xl font-bold mb-2">NEWS</h2>
+        <p class="text-lg pb-3 sm:pl-5 xl:pl-10">お知らせ</p>
+      </div>
+
+      <!-- 右カラム：お知らせ一覧 -->
+      <div class="w-full sm:w-3/4 xl:mr-20">
+        <ul>
+          <!-- 1件目 -->
+          <li class="border-b border-white/50">
+            <a href="#" class="block px-4 py-4 sm:py-10 hover:bg-white/10 transition">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:gap-4 space-y-2 sm:space-y-0">
+                <span class="w-25 min-w-max">2025.2.06</span>
+                <span class="w-15 border border-white px-3 py-1 text-sm min-w-max">お知らせ</span>
+                <span class="w-[60%] sm:ml-4">ホームページをリニューアル致しました。</span>
+              </div>
+            </a>
+          </li>
+
+          <!-- 2件目 -->
+          <li class="border-b border-white/50">
+            <a href="#" class="block px-4 py-4 sm:py-10 hover:bg-white/10 transition">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:gap-4 space-y-2 sm:space-y-0">
+                <span class="w-25 min-w-max">2025.2.06</span>
+                <span class="w-15 border border-white px-3 py-1 text-sm min-w-max">お知らせ</span>
+                <span class="w-[60%] sm:ml-4">小堀工務店の技術と人を小堀工務店公式SNSで公開</span>
+              </div>
+            </a>
+          </li>
+
+          <!-- 3件目 -->
+          <li class="border-b border-white/50">
+            <a href="#" class="block px-4 py-4 sm:py-10 hover:bg-white/10 transition">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:gap-4 space-y-2 sm:space-y-0">
+                <span class="w-25 min-w-max">2025.2.06</span>
+                <span class="w-15 border border-white px-3 py-1 text-sm min-w-max">お知らせ</span>
+                <span class="sm:w-[60%] sm:ml-4">会社説明会（2026年度卒業生対象）の先行予約がスタートしました！</span>
+              </div>
+            </a>
+          </li>
+      </div>
+    </div>
+    <div class="max-w-[1200px] mx-auto pt-15 flex justify-end px-4">
+      <a href="#" class="flex items-center gap-3 group hover:bg-white/10 px-4 py-2 rounded transition duration-300">
+        <span class="text-lg">バックナンバー</span>
+        <span
+          class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg transform transition duration-300 ease-out group-hover:translate-x-2 group-hover:scale-125 group-hover:bg-[#C2A74B]">
+          →
+        </span>
+      </a>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="bg-[#2d2d2d] text-white py-20 w-full">
+    <!-- 中央寄せ用コンテンツ枠 -->
+    <div class="max-w-[1200px] mx-auto text-left px-4">
+      <!-- タイトル -->
+      <h2 class="text-5xl font-bold mb-2">ABOUT</h2>
+      <p class="text-lg mb-10">小堀工務店について</p>
+    </div>
+
+    <div class="pc-none mb-10 max-w-[1560px] mx-0 opacity-0 translate-y-10 transition-all duration-1000 img-override"
+      id="fadeInImage">
+      <img src="img/top_006.png" alt="資材置き場" class="object-cover w-full" />
+    </div>
+
+    <div class="sp-none p-4 w-full mx-0 ">
+      <img src="img/top_007.png" alt="資材置き場" class="object-cover w-full" />
+    </div>
+
+    <!-- 残りのコンテンツ -->
+    <div class="max-w-[1200px] mx-auto text-left p-4">
+      <!-- 概要説明 -->
+      <p class="text-lg mb-10">
+        小堀工務店は埼玉県行田市に拠点を置き、低層中層における新築、リフォームの足場の施工、レンタルを<span class="hidden xl:inline"><br></span>
+        中心とした仕事をさせて頂いております。
+      </p>
+
+      <!-- MISSION -->
+      <div class="border-t border-white/30 pt-10">
+        <h3 class="text-5xl font-bold mb-4 max-sm:text-center">MISSION</h3>
+        <p class="text-lg leading-relaxed max-sm:pt-5">
+          小堀工務店のミッションは、安全で信頼性のある足場を提供することです。常にお客様のニーズを最優先に考え、<span class="hidden xl:inline"><br></span>
+          最高の品質とサービスを提供します。
+        </p>
+      </div>
+
+      <!-- 小堀工務店について リンク -->
+      <div class=" pt-10 flex justify-end">
+        <a href="#" class="flex items-center gap-3 group hover:bg-white/10 px-4 py-2 rounded transition duration-300">
+          <span class="text-lg">小堀工務店について</span>
+          <span
+            class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg transform transition duration-300 ease-out group-hover:translate-x-2 group-hover:scale-125 group-hover:bg-[#C2A74B]">
+            →
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="relative">
+    <!-- タイトル＋白背景部分 -->
+    <div class="bg-white pt-20 px-4 lg:px-16">
+      <div class="max-w-[1200px] mx-auto lg:text-center md:text-left">
+        <h2 class="text-5xl font-bold mb-2">SERVICE</h2>
+        <p class="text-lg">小堀工務店が行うこと</p>
+      </div>
+    </div>
+
+    <!-- カード部分：青背景 -->
+    <div class="pt-15 sm:pt-20 pb-30 lg:px-16 backcolor01">
+      <div class="m-full mx-auto grid grid-cols-1 lg:grid-cols-3 gap-15 lg:gap-8 text-white">
+
+        <!-- カード 1 -->
+        <div
+          class="fade-card relative bg-cover bg-center mx-auto w-full sm:max-w-[700px] h-[300px] lg:h-[520px] overflow-hidden shadow-lg group transition-all duration-300 lg:hover:scale-105"
+          style="background-image: url('img/top_008.png'); background-position: left;">
+          <div
+            class="absolute inset-0 bg-black/75 flex flex-col justify-between transition duration-300 group-hover:bg-black/60">
+            <div class="p-6">
+              <h3
+                class="relative text-[#C2A74B] font-bold text-2xl my-4 after:block after:bg-[#C2A74B] after:h-[2px] after:w-[40px] after:mt-1 after:content-['']">
+                新築上棟用先行足場</h3>
+              <p class="text-lg leading-relaxed pt-4 lg:pt-10 max-lg:w-[70%]">
+                ステージ階段をご要望に応じて施工しております。階段をストレスなく昇り降りが可能となります。
+              </p>
+            </div>
+            <a href="#"
+              class="bg-[#C2A74B] text-white flex justify-end gap-5 items-center px-4 py-5 transition group-hover:bg-yellow-500">
+              <span class="text-lg font-bold">新築上等用先行足場について</span>
+              <span class="bg-white text-[#C2A74B] rounded-full w-6 h-6 flex items-center justify-center">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- カード 2 -->
+        <div
+          class="fade-card relative bg-cover bg-center mx-auto w-full sm:max-w-[700px] h-[300px] lg:h-[520px] overflow-hidden shadow-lg group transition-all duration-300 lg:hover:scale-105"
+          style="background-image: url('img/top_009.png'); background-position: center;">
+          <div
+            class="absolute inset-0 bg-black/75 flex flex-col justify-between transition duration-300 group-hover:bg-black/60">
+            <div class="p-6">
+              <h3
+                class="relative text-[#C2A74B] font-bold text-2xl my-4 after:block after:bg-[#C2A74B] after:h-[2px] after:w-[40px] after:mt-1 after:content-['']">
+                リフォーム足場</h3>
+              <p class="text-lg leading-relaxed pt-4 lg:pt-10 max-lg:w-[70%]">
+                板金や樋の作業がしやすいように板金や植作業に特化をした足場を設置いたします。
+              </p>
+            </div>
+            <a href="#"
+              class="bg-[#C2A74B] text-white flex justify-end gap-5 items-center px-4 py-5 transition group-hover:bg-yellow-500">
+              <span class="text-lg font-bold">リフォーム足場について</span>
+              <span class="bg-white text-[#C2A74B] rounded-full w-6 h-6 flex items-center justify-center">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- カード 3 -->
+        <div
+          class="fade-card relative bg-cover bg-center mx-auto w-full sm:max-w-[700px] h-[300px] lg:h-[520px] overflow-hidden shadow-lg group transition-all duration-300 lg:hover:scale-105"
+          style="background-image: url('img/top_010.png'); background-position: right;">
+          <div
+            class="absolute inset-0 bg-black/75 flex flex-col justify-between transition duration-300 group-hover:bg-black/60">
+            <div class="p-6">
+              <h3
+                class="relative text-[#C2A74B] font-bold text-2xl my-4 after:block after:bg-[#C2A74B] after:h-[2px] after:w-[40px] after:mt-1 after:content-['']">
+                非住宅用足場</h3>
+              <p class="text-lg leading-relaxed pt-4 lg:pt-10 max-lg:w-[70%]">
+                商業施設や工業施設、公共施設等　多岐にわたるニーズに応える足場を提供し安全な環境を実現します。
+              </p>
+            </div>
+            <a href="#"
+              class="bg-[#C2A74B] text-white flex justify-end gap-5 items-center px-4 py-5 transition group-hover:bg-yellow-500">
+              <span class="text-lg font-bold">非住宅用足場</span>
+              <span class="bg-white text-[#C2A74B] rounded-full w-6 h-6 flex items-center justify-center">→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Swiper を利用したスタッフ紹介セクション -->
+  <section class="pc-none bg-white py-30">
+    <div class="max-w-full mx-auto lg:flex flex-col lg:flex-row gap-10">
+      <!-- 左側：紹介文 -->
+      <div class="relative w-full lg:w-1/3 lg:space-y-6 flex">
+        <div class="hidden xl:inline xl:w-1/2"></div>
+        <div class="w-full xl:w-1/2 px-4">
+          <div>
+            <h2 class="text-5xl font-bold">STAFF</h2>
+            <p class="text-lg mt-2">スタッフ紹介</p>
+          </div>
+          <p class="text-lg leading-relaxed py-10">
+            私たちのメンバーは、それぞれのスポーツで得た強靱な精神力、優れたチームワーク、そして高度な技術を駆使して、お客様に最高のサービスを提供します。
+          </p>
+          <div class=" pt-10 flex justify-end">
+            <a href="#"
+              class="flex items-center gap-3 group hover:bg-white/10 px-4 py-2 rounded transition duration-300">
+              <span class="text-lg">STAFF一覧</span>
+              <span
+                class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg transform transition duration-300 ease-out group-hover:translate-x-2 group-hover:scale-125 group-hover:bg-[#C2A74B]">
+                →
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右側：スライダー -->
+      <div class="w-full lg:w-2/3 space-y-6 overflow-visible">
+        <div class="wrapper relative overflow-visible">
+          <div class="staffSwiperContainer overflow-visible">
+            <div class="swiper staffSwiper overflow-visible">
+              <div class="swiper-wrapper">
+                <!-- スライドカード -->
+                <div class="swiper-slide !w-1/3 px-4 xl:px-8">
+                  <div class=" bg-black text-white overflow-hidden">
+                    <!-- 画像エリア：中央配置のための枠を追加 -->
+                    <div class="relative bg-black flex items-center justify-center h-auto">
+                      <img src="img/top_016.png" alt="小野寺 雅之" class="h-[260px] w-auto object-contain p-3 lg:p-6 pb-20 lg:pb-20 xl:pb-10" />
+
+                      <!-- プロフィールタグ：画像の下に重ねる -->
+                      <div class="absolute bottom-3 right-3 bg-[#C2A74B] text-white text-left px-4 py-3 w-[60%]"
+                        style="bottom:0;">
+                        <p class="text-xs text-white">2017年入社</p>
+                        <p class="text-xs text-white py-1">〇〇課</p>
+                        <p class="text-base font-bold text-white mt-1 leading-tight">小野寺 雅之</p>
+                        <p class="text-xs tracking-widest text-white py-1">MASAYUKI ONODERA</p>
+                      </div>
+                    </div>
+
+                    <!-- テキストエリア -->
+                    <div class="p-4 space-y-2">
+                      <h3 class="text-[#C2A74B] font-bold text-xl">ありがとうの言葉が自分の生きがい</h3>
+                      <p class="text-lg leading-relaxed text-white">
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキストが入ります。
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキスト
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide !w-1/3 px-4 xl:px-8">
+                  <div class=" bg-black text-white overflow-hidden">
+                    <!-- 画像エリア：中央配置のための枠を追加 -->
+                    <div class="relative bg-black flex items-center justify-center h-auto">
+                      <img src="img/top_017.png" alt="金子 祐樹" class="h-[260px] w-auto object-contain p-3 lg:p-6" />
+
+                      <!-- プロフィールタグ：画像の下に重ねる -->
+                      <div class="absolute bottom-3 right-3 bg-[#C2A74B] text-white text-left px-4 py-3 w-[60%]"
+                        style="bottom:0;">
+                        <p class="text-xs text-white">2017年入社</p>
+                        <p class="text-xs text-white py-1">〇〇課</p>
+                        <p class="text-base font-bold text-white mt-1 leading-tight">小野寺 雅之</p>
+                        <p class="text-xs tracking-widest text-white py-1">MASAYUKI ONODERA</p>
+                      </div>
+                    </div>
+
+                    <!-- テキストエリア -->
+                    <div class="p-4 space-y-2">
+                      <h3 class="text-[#C2A74B] font-bold text-xl">ありがとうの言葉が自分の生きがい</h3>
+                      <p class="text-lg leading-relaxed text-white">
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキストが入ります。
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキスト
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide !w-1/3 px-4 xl:px-8">
+                  <div class=" bg-black text-white overflow-hidden">
+                    <!-- 画像エリア：中央配置のための枠を追加 -->
+                    <div class="relative bg-black flex items-center justify-center h-auto">
+                      <img src="img/top_016.png" alt="小野寺 雅之" class="h-[260px] w-auto object-contain p-3 lg:p-6" />
+
+                      <!-- プロフィールタグ：画像の下に重ねる -->
+                      <div class="absolute bottom-3 right-3 bg-[#C2A74B] text-white text-left px-4 py-3 w-[60%]"
+                        style="bottom:0;">
+                        <p class="text-xs text-white">2017年入社</p>
+                        <p class="text-xs text-white py-1">〇〇課</p>
+                        <p class="text-base font-bold text-white mt-1 leading-tight">小野寺 雅之</p>
+                        <p class="text-xs tracking-widest text-white py-1">MASAYUKI ONODERA</p>
+                      </div>
+                    </div>
+
+                    <!-- テキストエリア -->
+                    <div class="p-4 space-y-2">
+                      <h3 class="text-[#C2A74B] font-bold text-xl">ありがとうの言葉が自分の生きがい</h3>
+                      <p class="text-lg leading-relaxed text-white">
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキストが入ります。
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキスト
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide !w-1/3 px-4 xl:px-8">
+                  <div class=" bg-black text-white overflow-hidden">
+                    <!-- 画像エリア：中央配置のための枠を追加 -->
+                    <div class="relative bg-black flex items-center justify-center h-auto">
+                      <img src="img/top_017.png" alt="小野寺 雅之" class="h-[260px] w-auto object-contain p-3 lg:p-6" />
+
+                      <!-- プロフィールタグ：画像の下に重ねる -->
+                      <div class="absolute bottom-3 right-3 bg-[#C2A74B] text-white text-left px-4 py-3 w-[60%]"
+                        style="bottom:0;">
+                        <p class="text-xs text-white">2017年入社</p>
+                        <p class="text-xs text-white py-1">〇〇課</p>
+                        <p class="text-base font-bold text-white mt-1 leading-tight">小野寺 雅之</p>
+                        <p class="text-xs tracking-widest text-white py-1">MASAYUKI ONODERA</p>
+                      </div>
+                    </div>
+
+                    <!-- テキストエリア -->
+                    <div class="p-4 space-y-2">
+                      <h3 class="text-[#C2A74B] font-bold text-xl">ありがとうの言葉が自分の生きがい</h3>
+                      <p class="text-lg leading-relaxed text-white">
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキストが入ります。
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキスト
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide !w-1/3 px-4 xl:px-8">
+                  <div class=" bg-black text-white overflow-hidden">
+                    <!-- 画像エリア：中央配置のための枠を追加 -->
+                    <div class="relative bg-black flex items-center justify-center h-auto">
+                      <img src="img/top_016.png" alt="小野寺 雅之" class="h-[260px] w-auto object-contain p-3 lg:p-6" />
+
+                      <!-- プロフィールタグ：画像の下に重ねる -->
+                      <div class="absolute bottom-3 right-3 bg-[#C2A74B] text-white text-left px-4 py-3 w-[60%]"
+                        style="bottom:0;">
+                        <p class="text-xs text-white">2017年入社</p>
+                        <p class="text-xs text-white py-1">〇〇課</p>
+                        <p class="text-base font-bold text-white mt-1 leading-tight">小野寺 雅之</p>
+                        <p class="text-xs tracking-widest text-white py-1">MASAYUKI ONODERA</p>
+                      </div>
+                    </div>
+
+                    <!-- テキストエリア -->
+                    <div class="p-4 space-y-2">
+                      <h3 class="text-[#C2A74B] font-bold text-xl">ありがとうの言葉が自分の生きがい</h3>
+                      <p class="text-lg leading-relaxed text-white">
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキストが入ります。
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキスト
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide !w-1/3 px-4 xl:px-8">
+                  <div class=" bg-black text-white overflow-hidden">
+                    <!-- 画像エリア：中央配置のための枠を追加 -->
+                    <div class="relative bg-black flex items-center justify-center h-auto">
+                      <img src="img/top_017.png" alt="小野寺 雅之" class="h-[260px] w-auto object-contain p-3 lg:p-6" />
+
+                      <!-- プロフィールタグ：画像の下に重ねる -->
+                      <div class="absolute bottom-3 right-3 bg-[#C2A74B] text-white text-left px-4 py-3 w-[60%]"
+                        style="bottom:0;">
+                        <p class="text-xs text-white">2017年入社</p>
+                        <p class="text-xs text-white py-1">〇〇課</p>
+                        <p class="text-base font-bold text-white mt-1 leading-tight">小野寺 雅之</p>
+                        <p class="text-xs tracking-widest text-white py-1">MASAYUKI ONODERA</p>
+                      </div>
+                    </div>
+
+                    <!-- テキストエリア -->
+                    <div class="p-4 space-y-2">
+                      <h3 class="text-[#C2A74B] font-bold text-xl">ありがとうの言葉が自分の生きがい</h3>
+                      <p class="text-lg leading-relaxed text-white">
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキストが入ります。
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキスト
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide !w-1/3 px-4 xl:px-8">
+                  <div class=" bg-black text-white overflow-hidden">
+                    <!-- 画像エリア：中央配置のための枠を追加 -->
+                    <div class="relative bg-black flex items-center justify-center h-auto">
+                      <img src="img/top_016.png" alt="小野寺 雅之" class="h-[260px] w-auto object-contain p-3 lg:p-6" />
+
+                      <!-- プロフィールタグ：画像の下に重ねる -->
+                      <div class="absolute bottom-3 right-3 bg-[#C2A74B] text-white text-left px-4 py-3 w-[60%]"
+                        style="bottom:0;">
+                        <p class="text-xs text-white">2017年入社</p>
+                        <p class="text-xs text-white py-1">〇〇課</p>
+                        <p class="text-base font-bold text-white mt-1 leading-tight">小野寺 雅之</p>
+                        <p class="text-xs tracking-widest text-white py-1">MASAYUKI ONODERA</p>
+                      </div>
+                    </div>
+
+                    <!-- テキストエリア -->
+                    <div class="p-4 space-y-2">
+                      <h3 class="text-[#C2A74B] font-bold text-xl">ありがとうの言葉が自分の生きがい</h3>
+                      <p class="text-lg leading-relaxed text-white">
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキストが入ります。
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキスト
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide !w-1/3 px-4 xl:px-8">
+                  <div class=" bg-black text-white overflow-hidden">
+                    <!-- 画像エリア：中央配置のための枠を追加 -->
+                    <div class="relative bg-black flex items-center justify-center h-auto">
+                      <img src="img/top_017.png" alt="小野寺 雅之" class="h-[260px] w-auto object-contain p-3 lg:p-6" />
+
+                      <!-- プロフィールタグ：画像の下に重ねる -->
+                      <div class="absolute bottom-3 right-3 bg-[#C2A74B] text-white text-left px-4 py-3 w-[60%]"
+                        style="bottom:0;">
+                        <p class="text-xs text-white">2017年入社</p>
+                        <p class="text-xs text-white py-1">〇〇課</p>
+                        <p class="text-base font-bold text-white mt-1 leading-tight">小野寺 雅之</p>
+                        <p class="text-xs tracking-widest text-white py-1">MASAYUKI ONODERA</p>
+                      </div>
+                    </div>
+
+                    <!-- テキストエリア -->
+                    <div class="p-4 space-y-2">
+                      <h3 class="text-[#C2A74B] font-bold text-xl">ありがとうの言葉が自分の生きがい</h3>
+                      <p class="text-lg leading-relaxed text-white">
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキストが入ります。
+                        スタッフ説明のテキストが入ります。スタッフ説明のテキスト
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative left-25" style="width:300px;">
+            <!-- カスタムナビゲーション -->
+            <div class="swiper-button-prev custom-prev" style="width: 50px; height: 50px;">
+              <img src="img/back.png" alt="前へ" class="w-25 h-25">
+            </div>
+            <div class="swiper-button-next custom-next" style="width: 50px; height: 50px;">
+              <img src="img/next.png" alt="次へ" class="w-25 h-25">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <script>
+    const swiper = new Swiper(".staffSwiper", {
+      spaceBetween: 0,
+      slidesPerView: 3,
+      loopedSlides: auto,
+      centeredSlides: false, // 中央寄せをオフ（左寄せになる）
+      loop: true, // ループを有効にする
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        init: function () {
+          updateActiveSlide(this);
+        },
+        slideChangeTransitionStart: function () {
+          updateActiveSlide(this);
+        },
+      },
+    });
+
+    function updateActiveSlide(swiperInstance) {
+      swiperInstance.slides.forEach(slide => {
+        slide.classList.remove("active-slide");
+        slide.classList.add("inactive-slide");
+      });
+      const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
+      activeSlide.classList.remove("inactive-slide");
+      activeSlide.classList.add("active-slide");
+    }
+
+
+  </script>
+
+
+  <section class="sp-none bg-white pb-20 max-w-full mx-auto">
+    <!-- タイトル -->
+    <div class="mb-6 px-4">
+      <h2 class="text-5xl font-bold text-black">STAFF</h2>
+      <p class="text-lg text-black mt-2">スタッフ紹介</p>
+    </div>
+
+    <!-- スタッフカード -->
+    <div class=" bg-white text-white overflow-hidden">
+      <!-- 画像エリア：中央配置のための枠を追加 -->
+      <div class="relative bg-white flex items-center justify-center h-auto pr-5">
+        <img src="img/top_016.png" alt="小野寺 雅之" class="h-[260px] w-auto object-contain p-6" />
+
+        <!-- プロフィールタグ：画像の下に重ねる -->
+        <div class="absolute bottom-3 right-3 bg-[#C2A74B] text-white text-left px-4 py-6 w-[200px]" style="bottom:0;">
+          <p class="text-lg text-white">2017年入社</p>
+          <p class="text-xs text-white py-1">〇〇課</p>
+          <p class="text-2xl font-bold text-white mt-4 leading-tight">小野寺 雅之</p>
+          <p class="text-xs tracking-widest text-white py-1">MASAYUKI ONODERA</p>
+        </div>
+      </div>
+
+      <!-- テキストエリア -->
+      <div class="p-4 space-y-2">
+        <h3 class="text-[#C2A74B] font-bold text-3xl py-3">ありがとうの言葉が自分の生きがい</h3>
+        <p class="text-lg leading-relaxed text-black">
+          スタッフ説明のテキストが入ります。スタッフ説明のテキストが入ります。
+          スタッフ説明のテキストが入ります。スタッフ説明のテキスト
+        </p>
+      </div>
+
+      <div class=" pt-5 pb-10 flex justify-start">
+        <a href="#" class="flex items-center gap-3 group hover:bg-white/10 px-4 py-2 rounded transition duration-300">
+          <span class="text-lg text-black">詳しく見る</span>
+          <span
+            class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg transform transition duration-300 ease-out group-hover:translate-x-2 group-hover:scale-125 group-hover:bg-[#C2A74B]">
+            →
+          </span>
+        </a>
+      </div>
+    </div>
+    <!-- スタッフカード -->
+    <div class=" bg-white text-white overflow-hidden">
+      <!-- 画像エリア：中央配置のための枠を追加 -->
+      <div class="relative bg-white flex items-center justify-center h-auto pl-5">
+        <img src="img/top_017.png" alt="小野寺 雅之" class="h-[260px] w-auto object-contain p-6" />
+
+        <!-- プロフィールタグ：画像の下に重ねる -->
+        <div class="absolute bottom-3 left-3 bg-[#C2A74B] text-white text-left px-4 py-6 w-[200px]" style="bottom:0;">
+          <p class="text-lg text-white">2019年入社</p>
+          <p class="text-xs text-white py-1">〇〇課</p>
+          <p class="text-2xl font-bold text-white mt-4 leading-tight">金子 祐樹</p>
+          <p class="text-xs tracking-widest text-white py-1">YUKI KANEKO</p>
+        </div>
+      </div>
+
+      <!-- テキストエリア -->
+      <div class="p-4 space-y-2">
+        <h3 class="text-[#C2A74B] font-bold text-3xl py-3">ありがとうの言葉が自分の生きがい</h3>
+        <p class="text-lg leading-relaxed text-black">
+          スタッフ説明のテキストが入ります。スタッフ説明のテキストが入ります。
+          スタッフ説明のテキストが入ります。スタッフ説明のテキスト
+        </p>
+      </div>
+
+      <div class=" pt-5 flex justify-start">
+        <a href="#" class="flex items-center gap-3 group hover:bg-white/10 px-4 py-2 rounded transition duration-300">
+          <span class="text-lg text-black">詳しく見る</span>
+          <span
+            class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg transform transition duration-300 ease-out group-hover:translate-x-2 group-hover:scale-125 group-hover:bg-[#C2A74B]">
+            →
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="relative mt-20 bg-cover bg-center text-white h-[500px]"
+      style="background-image: url('img/top_014.png');">
+
+      <!-- 紺色オーバーレイ（薄めに） -->
+      <div class="absolute inset-0 bg-[#001D7F]/70"></div>
+
+      <!-- コンテンツ（中央に表示） -->
+      <div class="relative z-10 max-w-md mx-auto flex flex-col items-center justify-center h-full text-center">
+        <div class="bg-[#2E2E2E]/80 p-8">
+          <!-- 見出し -->
+          <h2 class="text-3xl font-bold my-4">
+            施工するのは現役のアスリートだけ
+          </h2>
+
+          <!-- 説明 -->
+          <p class="text-left text-xl leading-relaxed my-10">
+            私たちのメンバーは、それぞれのスポーツで培った強靭な精神力、優れたチームワーク、<span class="hidden xl:inline"><br></span>
+            そして高度な技術を駆使して、お客様に最高のサービスを提供します。
+          </p>
+
+          <!-- ボタン -->
+          <a href="#staff"
+            class="inline-block bg-[#C2A74B] text-black font-bold text-3xl px-20 py-3 hover:bg-yellow-600 transition">
+            STAFF一覧
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative flex">
+    <!-- 左：白背景スペース -->
+    <div class="relative hidden lg:block w-1/6 bg-white">
+      <div class="absolute bottom-0 lg:block w-full h-30 bg-[#001f87]"></div>
+    </div>
+
+    <!-- 右：黒背景（WORKSタイトルを含む） -->
+    <div class="w-full lg:w-5/6 bg-[#2b2b2b] text-white py-30 px-6 lg:px-16">
+      <!-- タイトル -->
+      <div class="mb-8">
+        <h2 class="text-5xl font-bold">WORKS</h2>
+        <p class="text-lg mt-2 pb-5">施工実績</p>
+      </div>
+
+      <!-- グリッド：施工事例 -->
+      <div class="flex flex-wrap justify-around max-sm:gap-20">
+        <!-- カード例 -->
+        <div class="fade-card relative w-full sm:w-[30%] h-auto">
+          <!-- 背景画像 -->
+          <img src="img/top_011.png" alt="新築上棟用先行足場" class="w-full h-full object-cover">
+          <div class="relative w-full bg-cover bg-center text-black" style="background-image: url('img/top_018.png');">
+            <!-- オーバーレイ＋テキスト全体を覆う -->
+            <div class="absolute top-0 left-0 w-full h-full bg-[#C2A74B]/90 pointer-events-none"></div>
+            <!-- テキスト（通常フローで高さ確保） -->
+            <div class="relative top-0 left-0 w-full h-full z-10 flex flex-col px-5 py-6 text-black space-y-1">
+              <p class="text-lg font-bold">新築上棟用先行足場</p>
+              <p class="text-xl font-bold">〇〇市新築工事</p>
+              <p class="text-lg font-bold">2024年施工</p>
+            </div>
+          </div>
+        </div>
+        <div class="fade-card relative w-full sm:w-[30%] h-auto">
+          <!-- 背景画像 -->
+          <img src="img/top_012.png" alt="リフォーム足場" class="w-full h-full object-cover">
+          <div class="relative w-full bg-cover bg-center text-black" style="background-image: url('img/top_018.png');">
+            <!-- オーバーレイ＋テキスト全体を覆う -->
+            <div class="absolute top-0 left-0 w-full h-full bg-[#C2A74B]/90 pointer-events-none"></div>
+            <!-- テキスト（通常フローで高さ確保） -->
+            <div class="relative top-0 left-0 w-full h-full z-10 flex flex-col px-5 py-6 text-black space-y-1">
+              <p class="text-lg font-bold">リフォーム足場</p>
+              <p class="text-xl font-bold">〇〇市リフォーム工事</p>
+              <p class="text-lg font-bold">2025年施工</p>
+            </div>
+          </div>
+        </div>
+        <div class="fade-card relative w-full sm:w-[30%] h-auto">
+          <!-- 背景画像 -->
+          <img src="img/top_013.png" alt="非住宅用足場" class="w-full h-fFull object-cover">
+          <div class="relative w-full bg-cover bg-center text-black" style="background-image: url('img/top_018.png');">
+            <!-- オーバーレイ＋テキスト全体を覆う -->
+            <div class="absolute top-0 left-0 w-full h-full bg-[#C2A74B]/90 pointer-events-none"></div>
+            <!-- テキスト（通常フローで高さ確保） -->
+            <div class="relative top-0 left-0 w-full h-full z-10 flex flex-col px-5 py-6 text-black space-y-1">
+              <p class="text-lg font-bold">非住宅用足場</p>
+              <p class="text-xl font-bold">〇〇市倉庫工事</p>
+              <p class="text-lg font-bold">2024年施工</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="bg-[#001f87] text-white py-20 px-4 lg:px-16">
+    <div class="x-full mx-auto">
+      <!-- タイトル -->
+      <div class="max-w-[1200px] mx-auto text-center sm:text-left">
+        <h2 class="text-5xl font-bold mb-2">BLOG</h2>
+        <p class="text-lg mb-10">新着情報</p>
+      </div>
+      <div class="md:w-full">
+        <div class="wrapper2">
+          <div class="staffSwiperContainer2">
+            <div class="swiper staffSwiper2">
+              <div class="swiper-wrapper">
+                <!-- スライドカード -->
+                <div class="swiper-slide">
+                  <div>
+                    <img src="img/top_015.png" alt="ブログ画像" class="w-full object-cover" />
+                    <p class="text-lg mt-2">2025.2.06</p>
+                    <p class="text-xl font-bold">BLOGタイトル記入欄</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <img src="img/top_015.png" alt="ブログ画像" class="w-full object-cover" />
+                    <p class="text-lg mt-2">2025.2.06</p>
+                    <p class="text-xl font-bold">BLOGタイトル記入欄</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <img src="img/top_015.png" alt="ブログ画像" class="w-full object-cover" />
+                    <p class="text-lg mt-2">2025.2.06</p>
+                    <p class="text-xl font-bold">BLOGタイトル記入欄</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <img src="img/top_015.png" alt="ブログ画像" class="w-full object-cover" />
+                    <p class="text-lg mt-2">2025.2.06</p>
+                    <p class="text-xl font-bold">BLOGタイトル記入欄</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <img src="img/top_015.png" alt="ブログ画像" class="w-full object-cover" />
+                    <p class="text-lg mt-2">2025.2.06</p>
+                    <p class="text-xl font-bold">BLOGタイトル記入欄</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <img src="img/top_015.png" alt="ブログ画像" class="w-full object-cover" />
+                    <p class="text-lg mt-2">2025.2.06</p>
+                    <p class="text-xl font-bold">BLOGタイトル記入欄</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <img src="img/top_015.png" alt="ブログ画像" class="w-full object-cover" />
+                    <p class="text-lg mt-2">2025.2.06</p>
+                    <p class="text-xl font-bold">BLOGタイトル記入欄</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <img src="img/top_015.png" alt="ブログ画像" class="w-full object-cover" />
+                    <p class="text-lg mt-2">2025.2.06</p>
+                    <p class="text-xl font-bold">BLOGタイトル記入欄</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <img src="img/top_015.png" alt="ブログ画像" class="w-full object-cover" />
+                    <p class="text-lg mt-2">2025.2.06</p>
+                    <p class="text-xl font-bold">BLOGタイトル記入欄</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <img src="img/top_015.png" alt="ブログ画像" class="w-full object-cover" />
+                    <p class="text-lg mt-2">2025.2.06</p>
+                    <p class="text-xl font-bold">BLOGタイトル記入欄</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ページネーションとリンク -->
+      <div class="w-full sm:w-100 pt-10 sm:ml-[20%] flex justify-between items-center">
+        <div class="relative flex justify-between" style="width:150px;">
+          <!-- カスタムナビゲーション -->
+          <div class="swiper-button-prev2 custom-prev2 hover:opacity-70" style="width:40px;">
+            <img src="img/back.png" alt="前へ" class="w-20 h-20">
+          </div>
+          <div class="swiper-button-next2 custom-next2 hover:opacity-70" style="width:40px;">
+            <img src="img/next.png" alt="次へ" class="w-20 h-20">
+          </div>
+        </div>
+        <div>
+          <a href="#" class="flex items-center gap-3 group hover:bg-white/10 px-4 py-2 rounded transition duration-300">
+            <span class="text-lg">BLOG一覧</span>
+            <span
+              class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg transform transition duration-300 ease-out group-hover:translate-x-2 group-hover:scale-125 group-hover:bg-[#C2A74B]">
+              →
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    const swiper2 = new Swiper(".staffSwiper2", {
+      spaceBetween: 16,
+      loopedSlides: auto,
+      centeredSlides: false,
+      slidesPerGroup: 1,
+      loop: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 1, // モバイル
+        },
+        640: {
+          slidesPerView: 2, // タブレット
+        },
+        1024: {
+          slidesPerView: 5, // PC
+        },
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next2",
+        prevEl: ".swiper-button-prev2",
+      },
+      on: {
+        init: function () {
+          updateActiveSlide(this);
+        },
+        slideChangeTransitionStart: function () {
+          updateActiveSlide(this);
+        },
+      },
+    });
+
+    function updateActiveSlide(swiperInstance) {
+      swiperInstance.slides.forEach(slide => {
+        slide.classList.remove("active-slide2");
+        slide.classList.add("inactive-slide2");
+      });
+      const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
+      activeSlide.classList.remove("inactive-slide2");
+      activeSlide.classList.add("active-slide2");
+    }
+  </script>
+
+
+
+  <section class="max-w-[1200px] mx-auto bg-white py-30 px-6 lg:px-20">
+    <!-- 見出し -->
+    <h2 class="text-5xl font-bold mb-2 max-sm:text-center">CONTACT</h2>
+    <p class="text-lg font-semibold mb-6 max-sm:text-center">お問い合せ</p>
+    <p class="text-lg mb-12 text-center max-lg:px-5">
+      足場に関するご相談、お悩み、知りたいことは<span class="inline md:hidden"><br></span>小堀工務店にお気軽にご相談下さい
+    </p>
+
+    <!-- 問い合わせブロック -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-center">
+      <!-- メールでのお問い合わせ -->
+      <div class="fade-card relative border p-8">
+        <h3
+          class="absolute left-1/2 -top-5 transform -translate-x-1/2 bg-white text-xl font-semibold mb-4 px-6 py-2 tracking-wider whitespace-nowrap">
+          メールでのお問い合せ</h3>
+        <p class="text-lg my-6 leading-relaxed max-sm:text-left">
+          ご依頼はもちろん、他社様のお見積書のご不明点など、<span class="hidden xl:inline"><br></span>
+          足場に関することなら何でもお気軽にご相談ください。
+        </p>
+        <a href="#contact-form"
+          class="inline-flex items-center justify-center bg-black text-white px-10 py-6 rounded-full text-lg hover:opacity-70 transition">
+          お問い合せフォーム →
+        </a>
+      </div>
+
+      <!-- 電話でのお問い合わせ -->
+      <div class="fade-card relative border p-8">
+        <!-- タイトル -->
+        <h3
+          class="absolute left-1/2 -top-5 transform -translate-x-1/2 bg-white text-xl font-semibold mb-4 px-6 py-2 tracking-wider whitespace-nowrap">
+          お電話でのお問い合せ
+        </h3>
+
+        <!-- 中央に配置するエリア -->
+        <div class="h-full flex flex-col items-center justify-center text-center">
+          <!-- PC専用 -->
+          <p class="hidden sm:block mb-2">
+            <span class="text-5xl font-bold border-b border-black inline-block pt-6 pb-2">
+              090-3206-0969
+            </span>
+          </p>
+
+          <!-- スマホ専用 -->
+          <a href="tel:09032060969" class="block sm:hidden mb-2">
+            <span class="text-5xl font-bold border-b border-black inline-block pt-6 pb-2">
+              090-3206-0969
+            </span>
+          </a>
+
+          <p class="text-lg pt-4">(平日9時〜19時)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid grid-cols-1 md:grid-cols-3">
+    <!-- 採用情報 -->
+    <a href="#" class="hover:opacity-80">
+      <div class="fade-card relative h-64 flex items-center justify-center text-white overflow-hidden"
+        style="background-image: url('img/cta_01.png'); background-size: cover; background-position: left;">
+        <div class="absolute inset-0 bg-[#001D7F] opacity-70"></div>
+        <!-- テキスト・ボタンなど前面コンテンツ -->
+        <div class="relative z-10 text-left px-6">
+          <h3 class="text-sm uppercase tracking-wide">RECRUIT</h3>
+          <p class="text-2xl font-bold mb-2">採用情報</p>
+          <p class="text-lg mb-4">
+            一から学ぶ環境が整っているので未経験の方でも<span class="hidden xl:inline"><br></span>
+            ご安心ください。ご応募お待ちしております。
+          </p>
+          <div class="relative gap-3 px-4 py-2">
+            <div class="absolute right-0 flex items-center gap-2">
+              <span class="text-lg">募集要項</span>
+              <span
+                class="bg-white text-black rounded-full w-8 h-8 flex items-center justify-center text-lg transform ease-out  ">
+                →
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <!-- Instagram -->
+    <a href="#" class="hover:opacity-80 order-3 md:order-2">
+      <div class="fade-card relative h-64 flex items-center justify-center text-white overflow-hidden"
+        style="background-image: url('img/cta_02.png'); background-size: cover; background-position: left;">
+        <div
+          class="absolute inset-0 bg-[linear-gradient(to_bottom,_#5352A2_0%,_#A33591_35%,_#DE514A_70%,_#EB6D33_100%)] opacity-92">
+        </div>
+        <div class="relative z-10 text-white text-3xl font-semibold">
+          <img src="img/cta_02_icon.png" alt="Instagram">
+        </div>
+      </div>
+    </a>
+
+    <!-- TikTok -->
+    <a href="#" class="hover:opacity-80 order-2 md:order-3">
+      <div class="fade-card relative h-64 flex items-center justify-center text-white overflow-hidden"
+        style="background-image: url('img/cta_03.png'); background-size: cover; background-position: left;">
+        <div class="absolute inset-0 bg-black opacity-85"></div>
+        <div class="relative z-10 text-white text-3xl font-semibold">
+          <img src="img/cta_03_icon.png" alt="TikTok">
+        </div>
+      </div>
+    </a>
+  </section>
+
+  <footer class="bg-black text-white pt-12 px-6 lg:px-16">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center sm:gap-40">
+
+      <!-- 左側：会社情報 -->
+      <div class="max-sm:text-center max-sm:border-b pb-10 border-[#687072]">
+        <h2 class="text-2xl font-semibold py-10">有限会社小堀工務店</h2>
+        <p class="text-lg leading-relaxed">
+          〒361-0022<br>
+          埼玉県行田市桜町3-12-23<br><br>
+          TEL : 090-3206-0969<br>
+          FAX : 048-507-4778
+        </p>
+      </div>
+
+      <!-- 中央：メニュー -->
+      <div class="text-lg">
+        <h3 class="pc-none font-semibold sm:pt-18 pb-10 text-xl">MENU</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-10 gap-y-4 max-sm:pt-10">
+          <!-- 1列目 -->
+          <a href="#" class="hover:underline col-span-1">HOME</a>
+          <a href="#" class="hover:underline col-span-1">ABOUT</a>
+          <a href="#" class="hover:underline col-span-1">STAFF</a>
+          <a href="#" class="hover:underline col-span-1">BLOG</a>
+
+          <!-- 2列目 -->
+          <a href="#" class="hover:underline col-span-1">NEWS</a>
+          <a href="#" class="hover:underline col-span-1">SERVICE</a>
+          <a href="#" class="hover:underline col-span-1">WORKS</a>
+          <a href="#" class="hover:underline col-span-1">CONTACT</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 下部：SNS & コピーライト -->
+    <div class="flex justify-center mt-12 text-center space-y-3 gap-5">
+      <p class="relative text-sm top-3">小堀工務店公式SNS</p>
+      <span class="relative top-2 border-r border-white pr-3"></span>
+      <div class="flex justify-center items-center gap-4">
+        <a href="#" class="hover:opacity-70"><img src="img/icon01.png" alt="Instagram" class="w-6 h-6"></a>
+        <a href="#" class="hover:opacity-70"><img src="img/icon02.png" alt="TikTok" class="w-6 h-6"></a>
+      </div>
+    </div>
+    <p class="text-center text-xs text-gray-500 py-5">©Kobori koumuten, Inc. All Rights Reserved.</p>
+  </footer>
+
+  <!--スクリプト-->
+  <script src="js/main.js"></script>
+  <!--アニメーション-->
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove("opacity-0", "translate-y-10");
+            entry.target.classList.add("opacity-100", "translate-y-0");
+          }
+        });
+      },
+      {
+        threshold: 1.0,
+      }
+    );
+
+    const target = document.getElementById("fadeInImage");
+    if (target) observer.observe(target);
+  </script>
+
+</body>
+
+</html>
